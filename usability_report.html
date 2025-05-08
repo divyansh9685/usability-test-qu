@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comprehensive Usability Test Project Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    .feedback-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 30px auto;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    select, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #responseMsg {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e1ecf7;
+    }
+
+    a {
+      color: #0056b3;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Usability Test on a Website – Full Project Report</h1>
+
+  <div class="section">
+    <h2>Abstract</h2>
+    <p>
+      Usability testing plays a pivotal role in ensuring digital products are user-friendly and accessible. This report presents a structured usability test performed on a sample e-commerce website using a combination of heuristic evaluation, task analysis, and direct user feedback. The goal was to uncover design inefficiencies, navigation challenges, and performance bottlenecks through real-world user interaction. The study also introduces an embedded feedback form using web technologies (HTML, CSS, JavaScript) to capture ongoing user insights in real-time. Based on the test data, actionable improvements are proposed to optimize the user journey, enhance accessibility, and increase task success rates across devices.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Introduction</h2>
+    <p>
+      The growing reliance on digital platforms requires that websites not only function correctly but also offer a seamless user experience. Usability is a measure of how easily and efficiently users can navigate and interact with a system. Despite advancements in front-end frameworks and UI libraries, many websites still fall short in terms of user-centered design. This study addresses this issue by assessing usability flaws in a live website and recommending targeted improvements.
+    </p>
+    <p>
+      Usability testing identifies how real users interact with a website to uncover points of confusion, friction, or inefficiency. By focusing on an e-commerce use case, this project reflects typical challenges in real-world online retail scenarios—such as long checkouts, unclear calls-to-action, and mobile responsiveness.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Objectives</h2>
+    <ul>
+      <li>To evaluate how intuitive and efficient the user interface is.</li>
+      <li>To identify barriers that prevent users from completing core tasks.</li>
+      <li>To implement a simple yet effective feedback system using web technologies.</li>
+      <li>To enhance user satisfaction through measurable interface improvements.</li>
+      <li>To propose recommendations based on both qualitative and quantitative data.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Scope and Limitations</h2>
+    <p>
+      <strong>Scope:</strong> This project includes desktop and mobile usability testing for a functional e-commerce website. Core flows such as browsing products, adding items to the cart, and completing checkout were assessed. It also includes the integration of a feedback module for continuous input.
+    </p>
+    <p>
+      <strong>Limitations:</strong> The sample size was limited to 15 users due to time constraints. Additionally, the feedback system relies on voluntary user input, which may not represent all usability issues. Technical testing such as load balancing and backend performance was not within the project's scope.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Literature Review</h2>
+    <h3>Summary of Existing Research</h3>
+    <p>
+      Nielsen (1994) introduced 10 usability heuristics which are widely adopted across the design industry. These include visibility of system status, user control, consistency, error prevention, and help documentation. Krug (2014) emphasized minimal thinking by users, focusing on clarity and directness.
+    </p>
+    <h3>Gaps in Current Research</h3>
+    <ul>
+      <li>Limited implementation of real-time feedback mechanisms during testing.</li>
+      <li>Infrequent integration of user sentiment alongside analytics metrics.</li>
+      <li>Lack of practical code-based examples in academic studies.</li>
+    </ul>
+    <h3>Justification for Proposed Research</h3>
+    <p>
+      This project bridges these gaps by combining theoretical usability principles with live interaction data and code-level implementation. The embedded feedback mechanism allows dynamic, continuous improvement aligned with user behavior and suggestions.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Evaluation Methods</h2>
+    <ul>
+      <li><strong>Task Completion Rate:</strong> Percentage of users who completed a given task without assistance.</li>
+      <li><strong>System Usability Scale (SUS):</strong> A standardized 10-question survey producing a usability score from 0–100.</li>
+      <li><strong>Time on Task:</strong> The average duration users took to complete tasks.</li>
+      <li><strong>Error Rate:</strong> Number of misclicks or incomplete interactions.</li>
+      <li><strong>Real-time Feedback:</strong> Submitted through the integrated form.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Expected Outcomes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Before</th>
+          <th>After Implementation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SUS Score</td>
+          <td>63</td>
+          <td>82</td>
+        </tr>
+        <tr>
+          <td>Average Task Time</td>
+          <td>3.8 minutes</td>
+          <td>2.1 minutes</td>
+        </tr>
+        <tr>
+          <td>Error Rate</td>
+          <td>18%</td>
+          <td>4%</td>
+        </tr>
+        <tr>
+          <td>Feedback Participation</td>
+          <td>10%</td>
+          <td>45%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Significance of the Project</h2>
+    <p>
+      This project contributes to the field of web usability by demonstrating how real-time feedback and interactive testing can streamline design decisions. It serves as a reference for developers and UX professionals aiming to align interface behavior with user expectations. The hybrid methodology combining heuristic evaluation and user feedback yields a holistic understanding of user interaction patterns.
+    </p>
+  </div>
+
+  <div class="section feedback-container">
+    <h2>Interactive Feedback Form</h2>
+    <form id="feedbackForm">
+      <label for="ease">How easy was it to use the website?</label>
+      <select id="ease" required>
+        <option value="">-- Select an option --</option>
+        <option value="Very Easy">Very Easy</option>
+        <option value="Easy">Easy</option>
+        <option value="Neutral">Neutral</option>
+        <option value="Difficult">Difficult</option>
+      </select>
+
+      <label for="issues">What issues did you face?</label>
+      <textarea id="issues" rows="4" placeholder="Describe any problems or suggestions..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+      <p id="responseMsg"></p>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>References</h2>
+    <ol>
+      <li>Nielsen, J. (1994). <i>Usability Engineering</i>. Morgan Kaufmann Publishers.</li>
+      <li>Krug, S. (2014). <i>Don't Make Me Think, Revisited</i>. New Riders.</li>
+      <li>Brooke, J. (1996). <i>SUS - A quick and dirty usability scale</i>.</li>
+      <li>ISO 9241-11 (2018). Ergonomics of human-system interaction.</li>
+      <li><a href="https://www.hotjar.com/">Hotjar – Heatmaps and Behavior Analytics</a></li>
+      <li><a href="https://developers.google.com/analytics">Google Analytics</a></li>
+    </ol>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const ease = document.getElementById('ease').value.trim();
+      const issues = document.getElementById('issues').value.trim();
+      const msg = document.getElementById('responseMsg');
+
+      if (!ease) {
+        msg.style.color = "red";
+        msg.innerText = "Please select your experience rating.";
+        return;
+      }
+
+      const feedbackData = {
+        ease: ease,
+        issues: issues || "No issues specified."
+      };
+
+      console.log("Feedback Submitted:", feedbackData);
+
+      msg.style.color = "green";
+      msg.innerText = "Thank you for your feedback!";
+      document.getElementById('feedbackForm').reset();
+    });
+  </script>
+
+</body>
+</html>
